@@ -44,6 +44,9 @@ export default function App() {
       <Paper sx={{backgroundColor: 'blue', width: '100vw', height: '100vh', borderRadius: '0'}}>
 
       </Paper>
+      <Paper sx={{backgroundColor: 'cream', width: '100vw', height: '100vh', borderRadius: '0'}}>
+
+      </Paper>
     </Paper>
   );
 }

@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import * as semver from 'semver';
 import fs from 'fs';
-const requiredVersion = '^20';
+const requiredVersion = '^18';
 
 const currentVersion = process.version;
 if (!semver.satisfies(currentVersion, `${requiredVersion}`)) {
