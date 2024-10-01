@@ -1,19 +1,23 @@
 {
-  "name": "material-ui-cra-ts",
-  "version": "5.0.0",
+  "name": "Satokie Mining Website",
+  "version": "0.0.0",
   "private": true,
   "dependencies": {
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
+    "@mui/icons-material": "^6.1.1",
     "@mui/material": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-player": "^2.16.0",
+    "react-router-dom": "^6.26.2",
     "react-scripts": "latest",
     "typescript": "latest"
   },
   "scripts": {
+    "preinstall": "node check-node-and-npm-version.mjs",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
