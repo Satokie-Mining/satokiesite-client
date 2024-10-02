@@ -18,7 +18,7 @@ export default function App() {
       <Paper sx={{backgroundColor: 'black', width: '100vw', height: '90vh', borderRadius: '0'}}>
         <Grid2 container sx={{display: 'flex', justifyContent: 'flex-start', position: 'absolute'}}>
           <Grid2 sx={{ zIndex: 3}}>
-              <img src={logo} style={{width: 'calc(5vw + 4vh)', height: 'calc(5vw + 4vh)', margin: 'calc(2vw + 2vh)', position: 'absolute' }}/>
+              <img src={logo} style={{width: 'calc(5vw + 5vh)', height: 'calc(4vw + 4vh)', margin: 'calc(2vw + 2vh)', position: 'absolute' }}/>
             </Grid2>
         </Grid2>
         <Grid2 container spacing={0} sx={{display: 'flex', justifyContent: 'flex-end'}}>
