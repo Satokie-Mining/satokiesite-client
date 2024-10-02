@@ -6,4 +6,4 @@ This website is a private repository owned and distributed by Satokie Repair Sol
 ##### Getting Started
 
 #### Deployment
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/10206fe2-240d-4bae-a206-96e15d0fa921/deploy-status)](https://app.netlify.com/sites/satokiesite/deploys)
