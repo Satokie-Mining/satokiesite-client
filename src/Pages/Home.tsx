@@ -34,8 +34,8 @@ export default function Home(props): React.JSX.Element {
           <Grid2 container sx={{ margin: 'calc(4vw+5vh)', width: '100vw', height: "90vh", zIndex: 3}}>
             <Grid2 size={5} sx={{display: 'flex', flexDirection: 'column',alignItems: 'center', justifyContent:'center'}} >
               <Box sx={{width: 'calc(20vw + 20vh)', marginBottom: 'calc(10vw + 10vh)', marginLeft:'calc(10vw + 10vw)'}}>
-                <Typography variant='h6' color='white'>Satokie Mining</Typography>
-                <Typography variant='h3' color='white' sx={{textWrap: 'wrap'}}>WE BUILD, OWN AND OPERATE DATACENTERS THAT SUPPORT THE BITCOIN NETWORK</Typography>
+                <Typography variant='h6'  sx={{fontSize: 'calc(.6vh + .6vw)'}}color='white'>Satokie Mining</Typography>
+                <Typography variant='h3' sx={{fontSize: 'calc(1.6vh + 1.6vw)', textWrap: 'wrap'}} color='white'>WE BUILD, OWN AND OPERATE DATACENTERS THAT SUPPORT THE BITCOIN NETWORK</Typography>
               </Box>
             </Grid2>
             <Grid2 size={2} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>

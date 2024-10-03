@@ -1,6 +1,5 @@
 import React from "react"
 import {Paper, Grid2, Typography, Link, Box} from '@mui/material';
-import '../styles/buttonEffects.css';
 
 
 
