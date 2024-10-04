@@ -7,9 +7,10 @@ import Nav from '../components/Nav';
 import curvySection from '../assets/curvy-section.svg';
 import {Box, Grid2, Typography} from '@mui/material';
 import rackImg from '../assets/miner-rack-sect-2.jpg';
-import siteImg from '../assets/site-sect2-cropped-1.webp'
-import cloudHostingSvg from '../assets/cloud-hosting.svg'
-import ticketShdw from '../assets/ticket-shadow.png';
+import siteImg from '../assets/site-sect2-cropped-1.webp';
+import cloudHostingSvg from '../assets/cloud-hosting.svg';
+import peopleSvg from '../assets/people.svg';
+
 
 
 export default function Home(props): React.JSX.Element {
@@ -56,24 +57,37 @@ export default function Home(props): React.JSX.Element {
       </Paper>
       <Paper id='home-3' elevation={0} sx={{backgroundColor: 'cream', width: '100vw', height: '100vh', borderRadius: '0'}}>
         <Grid2 wrap='nowrap' sx={{display:'flex', alignItems:'space-between', justifyContent:'center'}} container spacing={3}>
-          <Grid2 size={3} position={{position: 'relative'}}>
+          <Grid2 size={3} position='relative'>
             <Box width='100%' height='100%' position='absolute' zIndex={1} >
               <svg id="Rxb0gwuOd2RZZaz3" fill="#062e60" viewBox="0 0 109.7036 146.0043"><g id="CTxoJCnxpADD2SgY"><path id="YAYqSJyBaBu2GALT" d="M103.45016064,0 L6.25338984,0 C6.25338984,3.44086003 3.4707799,6.25338984 0,6.25338984 L0,139.75091906 C3.44086003,139.75091906 6.25338984,142.53351946 6.25338984,146.00431795 L103.45016064,146.00431795 C103.45016064,142.56341906 106.23276104,139.75091906 109.70355953,139.75091906 L109.70355953,6.25338984 C106.26266064,6.25338984 103.45016064,3.4707799 103.45016064,0 Z" ></path></g></svg>
             </Box>
             <Box width='100%' height='100%' position='absolute' flexWrap='nowrap' zIndex={2} sx={{display:'flex',flexDirection:'column', justifyContent:'center', alignItems:'center', padding:'1.2rem' }} >
-              <Box sx={{zIndex: 3}}>
-                <img style={{objectFit: 'contain', width:'calc(3vw + 3vh)', height:'calc(3vw + 3vh)'}} src={cloudHostingSvg} alt="Cloud Hosting Image" />
-              </Box>
-              <Typography textAlign='center' color='white' sx={{fontSize: 'calc(.8vw + .8vh)', marginBottom:'calc(.5vw + .5vh)'}}>Hosting Solutions</Typography>
-              <Typography sx={{fontSize: 'calc(.8vw + .8vh)'}} textAlign='center' color='white'>Have ASICs that need cheap ​energy? Contact us today to get ​access to the cheapest power in ​the industry ran by world class ​operators.</Typography>
+              <Grid2 container spacing={1} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+                <Grid2 display='flex' justifyContent='center' alignItems='center' size={4}>
+                  <img style={{objectFit: 'contain', width:'100%', height:'auto'}} src={cloudHostingSvg} alt="Cloud Hosting Image" />
+                </Grid2>
+                <Grid2 sx={{width: '100%', height: 'auto'}} size={4}>
+                  <Typography textAlign='center' color='white' sx={{fontSize: 'calc(.9vw + .9vh)', fontWeight: 'bold', marginBottom:'calc(.5vw + .5vh)', flexShrink: 5}}>Hosting Solutions</Typography>
+                </Grid2>
+                <Grid2 sx={{width: '100%', height: 'auto'}} size={4}>
+                  <Typography sx={{fontSize: 'calc(.8vw + .8vh)', flexShrink: 5}} textAlign='center' color='white'>Have ASICs that need cheap ​energy? Contact us today to get ​access to the cheapest power in ​the industry ran by world class ​operators.</Typography>
+                </Grid2>
+              </Grid2>
             </Box>
           </Grid2>
-          <Grid2 size={3}>
-            <Box sx={{position: 'relative'}}>
+          <Grid2 position='relative' size={3}>
+            <Box width='100%' height='100%' sx={{position: 'absolute'}}>
               <svg id="Rxb0gwuOd2RZZaz3" fill="#062e60" viewBox="0 0 109.7036 146.0043"><g id="CTxoJCnxpADD2SgY"><path id="YAYqSJyBaBu2GALT" d="M103.45016064,0 L6.25338984,0 C6.25338984,3.44086003 3.4707799,6.25338984 0,6.25338984 L0,139.75091906 C3.44086003,139.75091906 6.25338984,142.53351946 6.25338984,146.00431795 L103.45016064,146.00431795 C103.45016064,142.56341906 106.23276104,139.75091906 109.70355953,139.75091906 L109.70355953,6.25338984 C106.26266064,6.25338984 103.45016064,3.4707799 103.45016064,0 Z" ></path></g></svg>
             </Box>
+            <Box width='100%' height='100%' position='absolute' flexWrap='nowrap' zIndex={2} sx={{display:'flex',flexDirection:'column', justifyContent:'center', alignItems:'center', padding:'1.2rem' }} >
+              <Box sx={{zIndex: 3, display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems:'center', width: '100%', height: '25%'}}>
+                <img style={{objectFit: 'contain', width:'30%', height:'auto'}} src={peopleSvg} alt="Cloud Hosting Image" />
+              </Box>
+              <Typography textAlign='center' color='white' sx={{fontSize: 'calc(.9vw + .9vh)', fontWeight: 'bold', marginBottom:'calc(.5vw + .5vh)'}}>3rd Party Site Operators</Typography>
+              <Typography sx={{fontSize: 'calc(.8vw + .8vh)'}} textAlign='center' color='white'>Looking to develop your own site ​and need an operating team? We ​offer 3rd party operating services ​so you can sleep at night knowing ​your site is taken care of.</Typography>
+            </Box>
           </Grid2>
-          <Grid2 size={3}>
+          <Grid2 position='relative' size={3}>
             <svg id="Rxb0gwuOd2RZZaz3" fill="#062e60"viewBox="0 0 109.7036 146.0043"><g id="CTxoJCnxpADD2SgY"><path id="YAYqSJyBaBu2GALT" d="M103.45016064,0 L6.25338984,0 C6.25338984,3.44086003 3.4707799,6.25338984 0,6.25338984 L0,139.75091906 C3.44086003,139.75091906 6.25338984,142.53351946 6.25338984,146.00431795 L103.45016064,146.00431795 C103.45016064,142.56341906 106.23276104,139.75091906 109.70355953,139.75091906 L109.70355953,6.25338984 C106.26266064,6.25338984 103.45016064,3.4707799 103.45016064,0 Z" ></path></g></svg>
           </Grid2>
 
