@@ -34,10 +34,10 @@ export default function NavItems(props): React.JSX.Element {
             <Typography style={navTypograhyStyle}>{item.text}</Typography>
           </Link>
       ))}
-      <Link>
+      <Link href="https://x.com/SatokieMining">
         <XIcon sx={{ fontSize: 'calc(1vw + 1vh)', marginTop: 'calc(.65vw + .65vh)', marginRight: 'calc(4vw+4vh)', marginLeft: '1.5rem', color: 'white', textDecoration: 'none', textWrap: 'nowrap'}}/>
       </Link>
-      <Link>
+      <Link href="https://www.linkedin.com/company/satokie-mining">
         <LinkedInIcon sx={{ fontSize: 'calc(1.2vw + 1.2vh)', marginTop: 'calc(.55vw + .55vh)', marginRight: 'calc(.4vw+ .4vh)', color: 'white', textDecoration: 'none', textWrap: 'nowrap'}} />
       </Link>
     </Grid2>
