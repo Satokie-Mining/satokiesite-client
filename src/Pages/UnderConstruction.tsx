@@ -8,7 +8,7 @@ export default function UnderConstruction(): React.JSX.Element {
 
   return (
     <Paper  sx={{position: 'relative', flexGrow: 1, overflowX: 'hidden'}}>
-      <Paper id='under-construction-1' sx={{backgroundColor: 'blue', width: '100vw', height: '90vh', borderRadius: '0'}}>
+      <Paper id='under-construction-1' sx={{backgroundColor: 'darkblue', width: '100vw', height: '90vh', borderRadius: '0'}}>
         <Grid2 container spacing={0} sx={{display: 'flex', justifyContent: 'center', alignItems:'center'}}>
           <Grid2 container spacing={0}>
             <Grid2 sx={{
