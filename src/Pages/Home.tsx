@@ -5,13 +5,26 @@ import videoUrl from '../assets/tour.mp4';
 import VideoItem from '../components/VideoItem';
 import Nav from '../components/Nav';
 import curvySection from '../assets/curvy-section.svg';
-import {Box, Grid2, Typography} from '@mui/material';
+import {Box, Grid2, Typography, Container} from '@mui/material';
 import rackImg from '../assets/miner-rack-sect-2.jpg';
 import siteImg from '../assets/site-sect2-cropped-1.webp';
 import cloudHostingSvg from '../assets/cloud-hosting.svg';
 import peopleSvg from '../assets/people.svg';
+import handsSvg from '../assets/hands.svg';
+import {styled } from '@mui/material/styles';
 
-
+const TicketItem = styled(Box)(({theme}) => ({
+  backgroundColor: '#fff',
+  padding: theme.spacing(1),
+  borderRadius: '0',
+  textAlign: 'center',
+  objectFit: 'contain',
+  width: '100%',
+  height: 'auto',
+  color: theme.palette.text.secondary, ...theme.applyStyles('dark', {
+    backgroundColor: '#1A2027'
+  }),
+}));
 
 export default function Home(props): React.JSX.Element {
 
@@ -55,43 +68,65 @@ export default function Home(props): React.JSX.Element {
         </Paper>
         <Paper sx={{width: '100%', height: '100%', borderRadius:'0', backgroundColor: '#062e60', position: 'absolute', zIndex: 1}}></Paper>
       </Paper>
-      <Paper id='home-3' elevation={0} sx={{backgroundColor: 'cream', width: '100vw', height: '100vh', borderRadius: '0'}}>
-        <Grid2 wrap='nowrap' sx={{display:'flex', alignItems:'space-between', justifyContent:'center'}} container spacing={3}>
-          <Grid2 size={3} position='relative'>
-            <Box width='100%' height='100%' position='absolute' zIndex={1} >
-              <svg id="Rxb0gwuOd2RZZaz3" fill="#062e60" viewBox="0 0 109.7036 146.0043"><g id="CTxoJCnxpADD2SgY"><path id="YAYqSJyBaBu2GALT" d="M103.45016064,0 L6.25338984,0 C6.25338984,3.44086003 3.4707799,6.25338984 0,6.25338984 L0,139.75091906 C3.44086003,139.75091906 6.25338984,142.53351946 6.25338984,146.00431795 L103.45016064,146.00431795 C103.45016064,142.56341906 106.23276104,139.75091906 109.70355953,139.75091906 L109.70355953,6.25338984 C106.26266064,6.25338984 103.45016064,3.4707799 103.45016064,0 Z" ></path></g></svg>
-            </Box>
-            <Box width='100%' height='100%' position='absolute' flexWrap='nowrap' zIndex={2} sx={{display:'flex',flexDirection:'column', justifyContent:'center', alignItems:'center', padding:'1.2rem' }} >
-              <Grid2 container spacing={1} sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-                <Grid2 display='flex' justifyContent='center' alignItems='center' size={4}>
-                  <img style={{objectFit: 'contain', width:'100%', height:'auto'}} src={cloudHostingSvg} alt="Cloud Hosting Image" />
-                </Grid2>
-                <Grid2 sx={{width: '100%', height: 'auto'}} size={4}>
-                  <Typography textAlign='center' color='white' sx={{fontSize: 'calc(.9vw + .9vh)', fontWeight: 'bold', marginBottom:'calc(.5vw + .5vh)', flexShrink: 5}}>Hosting Solutions</Typography>
-                </Grid2>
-                <Grid2 sx={{width: '100%', height: 'auto'}} size={4}>
-                  <Typography sx={{fontSize: 'calc(.8vw + .8vh)', flexShrink: 5}} textAlign='center' color='white'>Have ASICs that need cheap ​energy? Contact us today to get ​access to the cheapest power in ​the industry ran by world class ​operators.</Typography>
-                </Grid2>
-              </Grid2>
-            </Box>
-          </Grid2>
-          <Grid2 position='relative' size={3}>
-            <Box width='100%' height='100%' sx={{position: 'absolute'}}>
-              <svg id="Rxb0gwuOd2RZZaz3" fill="#062e60" viewBox="0 0 109.7036 146.0043"><g id="CTxoJCnxpADD2SgY"><path id="YAYqSJyBaBu2GALT" d="M103.45016064,0 L6.25338984,0 C6.25338984,3.44086003 3.4707799,6.25338984 0,6.25338984 L0,139.75091906 C3.44086003,139.75091906 6.25338984,142.53351946 6.25338984,146.00431795 L103.45016064,146.00431795 C103.45016064,142.56341906 106.23276104,139.75091906 109.70355953,139.75091906 L109.70355953,6.25338984 C106.26266064,6.25338984 103.45016064,3.4707799 103.45016064,0 Z" ></path></g></svg>
-            </Box>
-            <Box width='100%' height='100%' position='absolute' flexWrap='nowrap' zIndex={2} sx={{display:'flex',flexDirection:'column', justifyContent:'center', alignItems:'center', padding:'1.2rem' }} >
-              <Box sx={{zIndex: 3, display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems:'center', width: '100%', height: '25%'}}>
-                <img style={{objectFit: 'contain', width:'30%', height:'auto'}} src={peopleSvg} alt="Cloud Hosting Image" />
+      <Paper id='home-3' elevation={0} sx={{backgroundColor: 'cream', width: '100vw', height: '100vh', maxHeight: 'calc(100vw / 2)', borderRadius: '0', position: 'relative', zIndex:'0'}}>
+        <Box id='grid-box'  sx={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+          <Grid2  sx={{ width: '80cqw', height: '100%'}} id='ticket-container' wrap='nowrap' container spacing={3}>
+            <Grid2 id='ticket-1' size={4} position='relative'>
+              <Box sx={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+                <Box id='ticket-image-1' sx={{width: 'inherit', height: 'inherit', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}position='absolute' zIndex={1} >
+                  <TicketItem><svg id="Rxb0gwuOd2RZZaz3" fill="#062e60" viewBox="0 0 109.7036 146.0043"><g id="CTxoJCnxpADD2SgY"><path id="YAYqSJyBaBu2GALT" d="M103.45016064,0 L6.25338984,0 C6.25338984,3.44086003 3.4707799,6.25338984 0,6.25338984 L0,139.75091906 C3.44086003,139.75091906 6.25338984,142.53351946 6.25338984,146.00431795 L103.45016064,146.00431795 C103.45016064,142.56341906 106.23276104,139.75091906 109.70355953,139.75091906 L109.70355953,6.25338984 C106.26266064,6.25338984 103.45016064,3.4707799 103.45016064,0 Z" ></path></g></svg></TicketItem>
+                </Box>
+                <Box id='ticket-content-1' position='absolute' flexWrap='nowrap' zIndex={2} sx={{width: '80%', height: '100%', display:'flex',flexDirection:'column', justifyContent:'center', alignItems:'center'}} >
+                  <Box display='flex' justifyContent='center' alignItems='center'>
+                    <img style={{objectFit: 'contain', width:'30%', height:'auto', marginBottom: '3cqh', }} src={cloudHostingSvg} alt="Cloud Hosting Image" />
+                  </Box>
+                  <Box sx={{width: '80%', height: 'auto'}}>
+                    <Typography textAlign='center' color='white' sx={{fontSize: '1.9cqw', fontWeight: 'bold', marginBottom:'calc(.5vw + .5vh)', textWrap: 'nowrap'}}>Hosting Solutions</Typography>
+                  </Box>
+                  <Box sx={{width: '80%', height: 'auto'}}>
+                    <Typography sx={{fontSize: '1cqw'}} textAlign='center' color='white'>Have ASICs that need cheap ​energy? Contact us today to get ​access to the cheapest power in ​the industry ran by world class ​operators.</Typography>
+                  </Box>
+                </Box>
               </Box>
-              <Typography textAlign='center' color='white' sx={{fontSize: 'calc(.9vw + .9vh)', fontWeight: 'bold', marginBottom:'calc(.5vw + .5vh)'}}>3rd Party Site Operators</Typography>
-              <Typography sx={{fontSize: 'calc(.8vw + .8vh)'}} textAlign='center' color='white'>Looking to develop your own site ​and need an operating team? We ​offer 3rd party operating services ​so you can sleep at night knowing ​your site is taken care of.</Typography>
-            </Box>
+            </Grid2>
+            <Grid2 id='ticket-2' size={4} position='relative'>
+              <Box sx={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+                <Box id='ticket-image-2' sx={{width: 'inherit', height: 'inherit', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}position='absolute' zIndex={1} >
+                  <TicketItem><svg id="Rxb0gwuOd2RZZaz3" fill="#062e60" viewBox="0 0 109.7036 146.0043"><g id="CTxoJCnxpADD2SgY"><path id="YAYqSJyBaBu2GALT" d="M103.45016064,0 L6.25338984,0 C6.25338984,3.44086003 3.4707799,6.25338984 0,6.25338984 L0,139.75091906 C3.44086003,139.75091906 6.25338984,142.53351946 6.25338984,146.00431795 L103.45016064,146.00431795 C103.45016064,142.56341906 106.23276104,139.75091906 109.70355953,139.75091906 L109.70355953,6.25338984 C106.26266064,6.25338984 103.45016064,3.4707799 103.45016064,0 Z" ></path></g></svg></TicketItem>
+                </Box>
+                <Box id='ticket-content-2' position='absolute' flexWrap='nowrap' zIndex={2} sx={{width: '80%', height: '100%', display:'flex',flexDirection:'column', justifyContent:'center', alignItems:'center'}} >
+                  <Box display='flex' justifyContent='center' alignItems='center'>
+                    <img style={{objectFit: 'contain', width:'45%', height:'auto', marginBottom: '3cqh'}} src={peopleSvg} alt="Cloud Hosting Image" />
+                  </Box>
+                  <Box sx={{width: '80%', height: 'auto'}}>
+                    <Typography textAlign='center' color='white' sx={{fontSize: '1.9cqw', fontWeight: 'bold', marginBottom:'calc(.5vw + .5vh)', textWrap: 'nowrap'}}>3rd Party Operators</Typography>
+                  </Box>
+                  <Box sx={{width: '80%', height: 'auto'}}>
+                    <Typography sx={{fontSize: '1cqw'}} textAlign='center' color='white'>Looking to develop your own site ​and need an operating team? We ​offer 3rd party operating services ​so you can sleep at night knowing ​your site is taken care of.</Typography>
+                  </Box>
+                </Box>
+              </Box>
+            </Grid2>
+            <Grid2 id='ticket-3' size={4} position='relative'>
+              <Box sx={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+                <Box id='ticket-image-3' sx={{width: 'inherit', height: 'inherit', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}position='absolute' zIndex={1} >
+                  <TicketItem><svg id="Rxb0gwuOd2RZZaz3" fill="#062e60" viewBox="0 0 109.7036 146.0043"><g id="CTxoJCnxpADD2SgY"><path id="YAYqSJyBaBu2GALT" d="M103.45016064,0 L6.25338984,0 C6.25338984,3.44086003 3.4707799,6.25338984 0,6.25338984 L0,139.75091906 C3.44086003,139.75091906 6.25338984,142.53351946 6.25338984,146.00431795 L103.45016064,146.00431795 C103.45016064,142.56341906 106.23276104,139.75091906 109.70355953,139.75091906 L109.70355953,6.25338984 C106.26266064,6.25338984 103.45016064,3.4707799 103.45016064,0 Z" ></path></g></svg></TicketItem>
+                </Box>
+                <Box id='ticket-content-3' position='absolute' flexWrap='nowrap' zIndex={2} sx={{width: '80%', height: '100%', display:'flex',flexDirection:'column', justifyContent:'center', alignItems:'center'}} >
+                  <Box display='flex' justifyContent='center' alignItems='center'>
+                    <img style={{objectFit: 'contain', width:'30%', height:'auto', marginBottom: '3cqh'}} src={handsSvg} alt="Cloud Hosting Image" />
+                  </Box>
+                  <Box sx={{width: '80%', height: 'auto'}}>
+                    <Typography textAlign='center' color='white' sx={{fontSize: '1.9cqw', fontWeight: 'bold', marginBottom:'calc(.5vw + .5vh)', textWrap: 'nowrap'}}>Hosting Solutions</Typography>
+                  </Box>
+                  <Box sx={{width: '80%', height: 'auto'}}>
+                    <Typography sx={{fontSize: '1cqw'}} textAlign='center' color='white'>Have ASICs that need cheap ​energy? Contact us today to get ​access to the cheapest power in ​the industry ran by world class ​operators.</Typography>
+                  </Box>
+                </Box>
+              </Box>
+            </Grid2>
           </Grid2>
-          <Grid2 position='relative' size={3}>
-            <svg id="Rxb0gwuOd2RZZaz3" fill="#062e60"viewBox="0 0 109.7036 146.0043"><g id="CTxoJCnxpADD2SgY"><path id="YAYqSJyBaBu2GALT" d="M103.45016064,0 L6.25338984,0 C6.25338984,3.44086003 3.4707799,6.25338984 0,6.25338984 L0,139.75091906 C3.44086003,139.75091906 6.25338984,142.53351946 6.25338984,146.00431795 L103.45016064,146.00431795 C103.45016064,142.56341906 106.23276104,139.75091906 109.70355953,139.75091906 L109.70355953,6.25338984 C106.26266064,6.25338984 103.45016064,3.4707799 103.45016064,0 Z" ></path></g></svg>
-          </Grid2>
-
-        </Grid2>
+        </Box>
       </Paper>
       <Paper id='footer-contact' elevation={0} sx={{backgroundColor: '#062e60', width: '100vw', height: '100vh', borderRadius: '0'}}>
         
