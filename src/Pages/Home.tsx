@@ -11,6 +11,7 @@ import siteImg from '../assets/site-sect2-cropped-1.webp';
 import cloudHostingSvg from '../assets/cloud-hosting.svg';
 import peopleSvg from '../assets/people.svg';
 import handsSvg from '../assets/hands.svg';
+import terralinesSvg from '../assets/terralines.svg';
 import {styled } from '@mui/material/styles';
 
 const TicketItem = styled(Box)(({theme}) => ({
@@ -46,7 +47,7 @@ export default function Home(props): React.JSX.Element {
           </Grid2>
         </Grid2>
       </Paper>
-      <Paper id='home-2' elevation={0} sx={{width: '100vw', height: '90vh', borderRadius: '0', position: 'relative', overflow: 'hidden'}}>
+      <Paper id='home-2' elevation={0} sx={{width: '100vw', height: '90vh', maxHeight:'calc(100vw / 2)', borderRadius: '0', position: 'relative', overflow: 'hidden'}}>
         <Paper elevation={0} sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100%', borderRadius:'0', position: 'absolute'}}>
           <img style={{zIndex: 2, position: 'absolute', width: 'auto', height: '100%'}} src={curvySection} alt="svg curvy background image" />
           <Grid2 container sx={{ margin: 'calc(4vw+5vh)', width: '100vw', height: "90vh", zIndex: 3}}>
@@ -126,6 +127,31 @@ export default function Home(props): React.JSX.Element {
               </Box>
             </Grid2>
           </Grid2>
+        </Box>
+      </Paper>
+      <Paper id='home-4' elevation={1} sx={{backgroundColor:'#062e60', border: '1px red solid', width: '100vw', height: '40vh', maxHeight: 'calc(100vw / 5)', borderRadius: '0'}}>
+        <Box id='home-4-container'position='relative' width='100%' height='100%' display='flex' flexDirection='row' alignItems='center' justifyContent='center' zIndex={0}>
+          <Box id='background-svg-container' position={'absolute'} sx={{ display: 'flex', alignItems: 'center', justifyContent:'center', width: '100%', height: '100%', zIndex: 1, overflow: 'hidden'}}>
+            <img width='100%' src={terralinesSvg} alt="background svg" />
+          </Box>
+          <Box id='content-container' position={'absolute'} sx={{ display:'flex', flexDirection: 'row', alignItems: 'center', textAlign: 'center', justifyContent:'space-around', width: '100%', height: '100%', zIndex: 2}}>
+              <Box>
+                <Typography sx={{ fontSize: '6cqw', fontWeight: 'bold', textShadow: '0em .3em .5em rgba(0, 0, 0, 0.6) !important', color: 'white'}}>65</Typography>
+                <Typography sx={{ fontSize: '1.5cqw', fontWeight: 'bold', color: 'rgba(250, 250, 250, .6)'}}>Megawatts Deployed</Typography>
+              </Box>
+              <Box>
+                <Typography sx={{ fontSize: '6cqw', fontWeight: 'bold', textShadow: '0em .3em .5em rgba(0, 0, 0, 0.6) !important', color: 'white'}}>~2.5EH</Typography>
+                <Typography sx={{ fontSize: '1.5cqw', fontWeight: 'bold', color: 'rgba(250, 250, 250, .6)'}}>Megawatts Deployed</Typography>
+              </Box>
+              <Box>
+                <Typography sx={{ fontSize: '6cqw', fontWeight: 'bold', textShadow: '0em .3em .5em rgba(0, 0, 0, 0.6) !important', color: 'white'}}>5</Typography>
+                <Typography sx={{ fontSize: '1.5cqw', fontWeight: 'bold', color: 'rgba(250, 250, 250, .6)'}}>Sites Managed</Typography>
+              </Box>
+              <Box>
+                <Typography sx={{ fontSize: '6cqw', fontWeight: 'bold', textShadow: '0em .3em .5em rgba(0, 0, 0, 0.6) !important', color: 'white'}}>25</Typography>
+                <Typography sx={{ fontSize: '1.5cqw', fontWeight: 'bold', color: 'rgba(250, 250, 250, .6)'}}>Team Members</Typography>
+              </Box>
+          </Box>
         </Box>
       </Paper>
       <Paper id='footer-contact' elevation={0} sx={{backgroundColor: '#062e60', width: '100vw', height: '100vh', borderRadius: '0'}}>
