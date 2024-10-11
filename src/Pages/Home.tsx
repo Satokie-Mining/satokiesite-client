@@ -12,6 +12,10 @@ import cloudHostingSvg from '../assets/cloud-hosting.svg';
 import peopleSvg from '../assets/people.svg';
 import handsSvg from '../assets/hands.svg';
 import terralinesSvg from '../assets/terralines.svg';
+import teamImg from '../assets/team-on-site.jpg';
+import racksImg from '../assets/racks-comp.jpg';
+import siteRowsImg from '../assets/site-rows.jpg';
+import teamInspectionImg from '../assets/teamwork-inspection.webp';
 import {styled } from '@mui/material/styles';
 
 const TicketItem = styled(Box)(({theme}) => ({
@@ -129,7 +133,7 @@ export default function Home(props): React.JSX.Element {
           </Grid2>
         </Box>
       </Paper>
-      <Paper id='home-4' elevation={1} sx={{backgroundColor:'#062e60', border: '1px red solid', width: '100vw', height: '40vh', maxHeight: 'calc(100vw / 5)', borderRadius: '0'}}>
+      <Paper id='home-4' elevation={1} sx={{backgroundColor:'#062e60', width: '100vw', height: '40vh', maxHeight: 'calc(100vw / 5)', borderRadius: '0'}}>
         <Box id='home-4-container'position='relative' width='100%' height='100%' display='flex' flexDirection='row' alignItems='center' justifyContent='center' zIndex={0}>
           <Box id='background-svg-container' position={'absolute'} sx={{ display: 'flex', alignItems: 'center', justifyContent:'center', width: '100%', height: '100%', zIndex: 1, overflow: 'hidden'}}>
             <img width='100%' src={terralinesSvg} alt="background svg" />
@@ -137,25 +141,51 @@ export default function Home(props): React.JSX.Element {
           <Box id='content-container' position={'absolute'} sx={{ display:'flex', flexDirection: 'row', alignItems: 'center', textAlign: 'center', justifyContent:'space-around', width: '100%', height: '100%', zIndex: 2}}>
               <Box>
                 <Typography sx={{ fontSize: '6cqw', fontWeight: 'bold', textShadow: '0em .3em .5em rgba(0, 0, 0, 0.6) !important', color: 'white'}}>65</Typography>
-                <Typography sx={{ fontSize: '1.5cqw', fontWeight: 'bold', color: 'rgba(250, 250, 250, .6)'}}>Megawatts Deployed</Typography>
+                <Typography sx={{ fontSize: '1.5cqw', fontWeight: 'bold', color: 'rgba(250, 250, 250, .6)'}}>MEGAWATTS DEPLOYED</Typography>
               </Box>
               <Box>
                 <Typography sx={{ fontSize: '6cqw', fontWeight: 'bold', textShadow: '0em .3em .5em rgba(0, 0, 0, 0.6) !important', color: 'white'}}>~2.5EH</Typography>
-                <Typography sx={{ fontSize: '1.5cqw', fontWeight: 'bold', color: 'rgba(250, 250, 250, .6)'}}>Megawatts Deployed</Typography>
+                <Typography sx={{ fontSize: '1.5cqw', fontWeight: 'bold', color: 'rgba(250, 250, 250, .6)'}}>HASHRATE OPERATED</Typography>
               </Box>
               <Box>
                 <Typography sx={{ fontSize: '6cqw', fontWeight: 'bold', textShadow: '0em .3em .5em rgba(0, 0, 0, 0.6) !important', color: 'white'}}>5</Typography>
-                <Typography sx={{ fontSize: '1.5cqw', fontWeight: 'bold', color: 'rgba(250, 250, 250, .6)'}}>Sites Managed</Typography>
+                <Typography sx={{ fontSize: '1.5cqw', fontWeight: 'bold', color: 'rgba(250, 250, 250, .6)'}}>SITES MANAGED</Typography>
               </Box>
               <Box>
                 <Typography sx={{ fontSize: '6cqw', fontWeight: 'bold', textShadow: '0em .3em .5em rgba(0, 0, 0, 0.6) !important', color: 'white'}}>25</Typography>
-                <Typography sx={{ fontSize: '1.5cqw', fontWeight: 'bold', color: 'rgba(250, 250, 250, .6)'}}>Team Members</Typography>
+                <Typography sx={{ fontSize: '1.5cqw', fontWeight: 'bold', color: 'rgba(250, 250, 250, .6)'}}>TEAM MEMBERS</Typography>
               </Box>
           </Box>
         </Box>
       </Paper>
+      <Paper id='home-5' elevation={0} sx={{backgroundColor: 'cream', width: '100vw', height: '150vh', maxHeight: 'calc(100vw * 1.6)', borderRadius: '0', zIndex: 0}}>
+        <Box id='gallery-container' width={'100%'} height={'100%'} sx={{padding: '3cqw', zIndex: 1}}>
+          <Grid2 container id='gallery-parent-grid' spacing={4} width={'100%'} height={'100%'} sx={{zIndex: 2, backgroundColor: 'purple'}}>
+              <Grid2 id='gallery-left-column'size={6} sx={{backgroundColor: 'green'}}>
+                <Box id='collumn-box-container' width={'100%'} height={'100%'}>
+                  <Grid2 id='gallery-left-column-container' container rowSpacing={8} width={'100%'} height={'100%'}>
+                    <Grid2 id='top-left-text' size={12} sx={{backgroundColor: 'black', height: '30%', width:'100%', zIndex: 3}}>
+                    </Grid2>
+                    <Grid2 id='bottom-left-img' size={12} sx={{backgroundColor: 'white', height: '65%', width: '100%', zIndex: 3}}>
+                    </Grid2>
+                  </Grid2>
+                </Box>
+              </Grid2>
+              <Grid2 id='gallery-right-column' size={6} sx={{backgroundColor: 'orange', height: '100%'}}>
+              <Box id='collumn-box-container' width={'100%'} height={'100%'}>
+                <Grid2 id='gallery-left-column-container' container rowSpacing={8} width={'100%'} height={'100%'}>
+                  <Grid2 id='top-left-text' size={12} sx={{backgroundColor: 'yellow', height: '30%', width:'100%', zIndex: 3}}>
+                  </Grid2>
+                  <Grid2 id='bottom-left-img' size={12} sx={{backgroundColor: 'teal', height: '65%', width: '100%', zIndex: 3}}>
+                  </Grid2>
+                </Grid2>
+              </Box>
+            </Grid2>
+          </Grid2>
+        </Box>
+      </Paper>
       <Paper id='footer-contact' elevation={0} sx={{backgroundColor: '#062e60', width: '100vw', height: '100vh', borderRadius: '0'}}>
-        
+        <p>contact@satokie.io</p>
       </Paper>
     </Paper>
   );
