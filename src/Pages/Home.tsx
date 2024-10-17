@@ -4,7 +4,7 @@ import videoUrl from '../assets/tour.mp4';
 import VideoItem from '../components/VideoItem';
 import Nav from '../components/Nav';
 import curvySection from '../assets/curvy-section.svg';
-import {Box, Grid2, Typography, Container} from '@mui/material';
+import {Box, Grid2, Typography, Link} from '@mui/material';
 import rackImg from '../assets/miner-rack-sect-2.jpg';
 import siteImg from '../assets/site-sect2-cropped-1.webp';
 import cloudHostingSvg from '../assets/cloud-hosting.svg';
@@ -14,8 +14,11 @@ import terralinesSvg from '../assets/terralines.svg';
 import teamImg from '../assets/team-on-site.jpg';
 import racksImg from '../assets/racks-comp.jpg';
 import siteRowsImg from '../assets/site-rows.jpg';
+import poloImg from '../assets/polo.jpg';
 import teamInspectionImg from '../assets/teamwork-inspection.webp';
 import {styled } from '@mui/material/styles';
+import XIcon from '@mui/icons-material/X';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import '../styles/global.css'
 
 const TicketItem = styled(Box)(({theme}) => ({
@@ -175,7 +178,7 @@ export default function Home(props): React.JSX.Element {
                       </Box>
                     </Grid2>
                     <Grid2 id='bottom-left-img' size={12} sx={{backgroundColor: 'green', height: '70%', width: '100%', zIndex: 3}}>
-                      <Box id='bottom-right-img-1' sx={{width: '100%', height: '100%', backgroundColor: 'blueviolet'}}>
+                      <Box id='bottom-right-img-1' sx={{width: '100%', height: '100%'}}>
                         <img src={racksImg} loading='lazy' style={{objectFit: 'cover', width: '100%', height:'100%'}}  alt="Satokie Racks Image" />
                       </Box>
                     </Grid2>
@@ -212,8 +215,36 @@ export default function Home(props): React.JSX.Element {
           </Grid2>
         </Box>
       </Paper>
-      <Paper id='footer-contact' elevation={0} sx={{backgroundColor: '#062e60', width: '100vw', height: '100vh', borderRadius: '0'}}>
-        <p>contact@satokie.io</p>
+      <Paper id='footer-contact' elevation={0} sx={{backgroundColor: '#062e60', width: '100vw', height: '90vh', borderRadius: '0', marginTop: '2cqw', overflow: 'hidden'}}>
+        <Box id='footer-img-container' sx={{width: '100%', height: '80%', position: 'relative'}}>
+          <Box id='background-img' sx={{width: '100%', height: '100%', position: 'absolute'}}>
+            <img src={poloImg} style={{objectFit: 'cover', height: '100%', width: '100%'}} alt="Satokie Logo on Polo Shirt" />
+          </Box>
+          {/* <Box id='footer-overlay' sx={{width: '100%', height: '100%', position: 'absolute', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(0, 0, 0, .3)'}}>
+            <Box id='copy-box' sx={{width: '80%', height: '80%'}}>
+              <Typography variant='h3' sx={{color: 'white', fontWeight: 'bold', textShadow: '0em .2em .4em rgba(250, 250, 250, 0.3) !important'}}>CONTACT US</Typography>
+              <Typography variant='subtitle1' sx={{color: 'white', textShadow: '0em .2em .4em rgba(250, 250, 250, 0.3) !important'}}>BITCOIN MINING SOLUTIONS</Typography>
+            </Box>
+          </Box> */}
+        </Box>
+        <Box id='subfooter-container' sx={{height: '20%', width: '100%', position: 'relative'}}>
+          <Box id='subfooter-background-img' sx={{height: '100%', width: '100%', position: 'absolute'}}>
+              <img src={terralinesSvg} style={{width: '100%', height: '200%', objectFit: 'cover'}} alt="terralines background svg" />
+          </Box>
+          <Box id='subfooter-overlay' sx={{height: '100%', width: '90%', marginLeft: '3cqw', position: 'absolute', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+            <Box sx={{textAlign: 'center'}}>
+              <Typography variant='h6' sx={{ fontSize: '2cqw', color: 'white', textShadow: '0em .4em .5em rgba(0,0,0, .8) !important', textDecoration: 'underline'}}>contact@satokie.io</Typography>
+            </Box>
+            <Box>
+              <Link href="https://x.com/SatokieMining">
+                <XIcon sx={{ fontSize: '1.9cqw', marginTop: 'calc(.65vw + .65vh)', marginRight: '.5cqw', marginLeft: '1.5rem', color: 'white', textDecoration: 'none', textWrap: 'nowrap'}}/>
+              </Link>
+              <Link href="https://www.linkedin.com/company/satokie-mining">
+                <LinkedInIcon sx={{ fontSize: '2cqw', marginTop: '1cqh', color: 'white', textDecoration: 'none', textWrap: 'nowrap'}} />
+              </Link> 
+            </Box>
+          </Box>
+        </Box>
       </Paper>
     </Paper>
   );
