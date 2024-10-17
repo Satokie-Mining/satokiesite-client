@@ -177,7 +177,7 @@ export default function Home(props): React.JSX.Element {
                         </Box>
                       </Box>
                     </Grid2>
-                    <Grid2 id='bottom-left-img' size={12} sx={{backgroundColor: 'green', height: '70%', width: '100%', zIndex: 3}}>
+                    <Grid2 id='bottom-left-img' size={12} sx={{height: '70%', width: '100%', zIndex: 3}}>
                       <Box id='bottom-right-img-1' sx={{width: '100%', height: '100%'}}>
                         <img src={racksImg} loading='lazy' style={{objectFit: 'cover', width: '100%', height:'100%'}}  alt="Satokie Racks Image" />
                       </Box>
@@ -202,7 +202,7 @@ export default function Home(props): React.JSX.Element {
                             </Box>
                           </Grid2>
                           <Grid2 size={12} sx={{width: '100%', height: '47%'}}>
-                            <Box id='bottom-right-img-2' sx={{width: '100%', height: '100%', backgroundColor: 'red'}}>
+                            <Box id='bottom-right-img-2' sx={{width: '100%', height: '100%'}}>
                               <img src={siteRowsImg} loading='lazy' style={{objectFit: 'cover', width: '100%', height:'100%'}}  alt="Satokie Site Rows Image" />
                             </Box>
                           </Grid2>                        
