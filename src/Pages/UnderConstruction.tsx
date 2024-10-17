@@ -20,8 +20,8 @@ export default function UnderConstruction(): React.JSX.Element {
                 zIndex: 2}}>
                 <Box sx={{ height: '100%', textAlign:'center', display: 'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center'}}>
                   <Typography variant='h4' color="white">404 - Pardon Our Dust - 404</Typography>
-                  <Typography variant='subtitle1'>This page is still under construction.</Typography>
-                  <Link href='/'><Typography variant="subtitle2">Return</Typography></Link>
+                  <Typography variant='subtitle1' color="white">This page is still under construction.</Typography>
+                  <Link href='/'><Typography variant="subtitle2" color="white">Return</Typography></Link>
               </Box>
             </Grid2>
           </Grid2>
