@@ -9,7 +9,8 @@ export default function NavItems(props): React.JSX.Element {
   
   const navTypograhyStyle = {
     fontSize: 'calc(1vw + 1vh)',
-    margin: 'calc(0.5vw + 0.5vh)'
+    margin: 'calc(0.5vw + 0.5vh)',
+    textShadow: '0em .2em .5em rgba(0,0,0,.9) !important',
   };
   
   const navLinkStyle = {
@@ -31,7 +32,7 @@ export default function NavItems(props): React.JSX.Element {
     <Grid2 size={6} sx={{ display: 'flex', justifyContent:' flex-end', position: 'absolute', zIndex: 3, margin: '2.0rem'}}>
       {navItems.map( item => (
           <Link href={item.ref} underline='hover' sx={navLinkStyle} style={{textDecoration: props.isActive ? 'underline': 'none'}}>
-            <Typography style={navTypograhyStyle}>{item.text}</Typography>
+            <Typography sx={navTypograhyStyle}>{item.text}</Typography>
           </Link>
       ))}
       <Link href="https://x.com/SatokieMining">
