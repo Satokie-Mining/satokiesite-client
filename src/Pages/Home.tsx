@@ -1,5 +1,4 @@
 import React from 'react';
-import { useEffect } from 'react';
 import Paper from '@mui/material/Paper';
 import videoUrl from '../assets/tour.mp4';
 import VideoItem from '../components/VideoItem';
@@ -11,7 +10,13 @@ import siteImg from '../assets/site-sect2-cropped-1.webp';
 import cloudHostingSvg from '../assets/cloud-hosting.svg';
 import peopleSvg from '../assets/people.svg';
 import handsSvg from '../assets/hands.svg';
+import terralinesSvg from '../assets/terralines.svg';
+import teamImg from '../assets/team-on-site.jpg';
+import racksImg from '../assets/racks-comp.jpg';
+import siteRowsImg from '../assets/site-rows.jpg';
+import teamInspectionImg from '../assets/teamwork-inspection.webp';
 import {styled } from '@mui/material/styles';
+import '../styles/global.css'
 
 const TicketItem = styled(Box)(({theme}) => ({
   backgroundColor: '#fff',
@@ -46,7 +51,7 @@ export default function Home(props): React.JSX.Element {
           </Grid2>
         </Grid2>
       </Paper>
-      <Paper id='home-2' elevation={0} sx={{width: '100vw', height: '90vh', borderRadius: '0', position: 'relative', overflow: 'hidden'}}>
+      <Paper id='home-2' elevation={0} sx={{width: '100vw', height: '90vh', maxHeight:'calc(100vw / 2)', borderRadius: '0', position: 'relative', overflow: 'hidden'}}>
         <Paper elevation={0} sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100%', borderRadius:'0', position: 'absolute'}}>
           <img style={{zIndex: 2, position: 'absolute', width: 'auto', height: '100%'}} src={curvySection} alt="svg curvy background image" />
           <Grid2 container sx={{ margin: 'calc(4vw+5vh)', width: '100vw', height: "90vh", zIndex: 3}}>
@@ -128,8 +133,87 @@ export default function Home(props): React.JSX.Element {
           </Grid2>
         </Box>
       </Paper>
+      <Paper id='home-4' elevation={1} sx={{backgroundColor:'#062e60', width: '100vw', height: '40vh', maxHeight: 'calc(100vw / 5)', borderRadius: '0'}}>
+        <Box id='home-4-container'position='relative' width='100%' height='100%' display='flex' flexDirection='row' alignItems='center' justifyContent='center' zIndex={0}>
+          <Box id='background-svg-container' position={'absolute'} sx={{ display: 'flex', alignItems: 'center', justifyContent:'center', width: '100%', height: '100%', zIndex: 1, overflow: 'hidden'}}>
+            <img width='100%' src={terralinesSvg} alt="background svg" />
+          </Box>
+          <Box id='content-container' position={'absolute'} sx={{ display:'flex', flexDirection: 'row', alignItems: 'center', textAlign: 'center', justifyContent:'space-around', width: '100%', height: '100%', zIndex: 2}}>
+              <Box>
+                <Typography sx={{ fontSize: '6cqw', fontWeight: 'bold', textShadow: '0em .3em .5em rgba(0, 0, 0, 0.6) !important', color: 'white'}}>65</Typography>
+                <Typography sx={{ fontSize: '1.5cqw', fontWeight: 'bold', color: 'rgba(250, 250, 250, .6)'}}>MEGAWATTS DEPLOYED</Typography>
+              </Box>
+              <Box>
+                <Typography sx={{ fontSize: '6cqw', fontWeight: 'bold', textShadow: '0em .3em .5em rgba(0, 0, 0, 0.6) !important', color: 'white'}}>~2.5EH</Typography>
+                <Typography sx={{ fontSize: '1.5cqw', fontWeight: 'bold', color: 'rgba(250, 250, 250, .6)'}}>HASHRATE OPERATED</Typography>
+              </Box>
+              <Box>
+                <Typography sx={{ fontSize: '6cqw', fontWeight: 'bold', textShadow: '0em .3em .5em rgba(0, 0, 0, 0.6) !important', color: 'white'}}>5</Typography>
+                <Typography sx={{ fontSize: '1.5cqw', fontWeight: 'bold', color: 'rgba(250, 250, 250, .6)'}}>SITES MANAGED</Typography>
+              </Box>
+              <Box>
+                <Typography sx={{ fontSize: '6cqw', fontWeight: 'bold', textShadow: '0em .3em .5em rgba(0, 0, 0, 0.6) !important', color: 'white'}}>25</Typography>
+                <Typography sx={{ fontSize: '1.5cqw', fontWeight: 'bold', color: 'rgba(250, 250, 250, .6)'}}>TEAM MEMBERS</Typography>
+              </Box>
+          </Box>
+        </Box>
+      </Paper>
+      <Paper id='home-5' elevation={0} sx={{backgroundColor: 'cream', width: '100vw', height: '150vh', maxHeight: 'calc(100vw * 1.6)', borderRadius: '0', zIndex: 0}}>
+        <Box id='gallery-container' width={'100%'} height={'100%'} sx={{padding: '6cqw', zIndex: 1}}>
+          <Grid2 container id='gallery-parent-grid' spacing={6} width={'100%'} height={'100%'} sx={{zIndex: 2}}>
+              <Grid2 id='gallery-left-column'size={6}>
+                <Box id='collumn-box-container' width={'100%'} height={'100%'}>
+                  <Grid2 id='gallery-left-column-container' container rowSpacing={7.5} width={'100%'} height={'100%'}>
+                    <Grid2 id='top-left-text' size={12} sx={{height: '30%', width:'100%', zIndex: 3}}>
+                      <Box id='top-left-text-box'>
+                        <Box id='top-left-text-title' sx={{marginBottom: '2cqh'}}>
+                            <Typography variant='h3' sx={{fontWeight: 'bold', fontSize: '3cqw', color: '#062e60'}}>Setting the Standard for Bitcoin Mining Co-Location</Typography>
+                        </Box>
+                        <Box id='top-left-text-content' sx={{width: '90%'}}>
+                            <Typography variant='h5' sx={{lineHeight: '4cqh', fontSize: '1.6cqw'}}>Our mission is to offer our clients the most ​trustworthy and optimized hosting ​facilities so that they no longer have to ​worry about the quality of care their ASICs ​are getting and know they are receiving ​the lowest power rates.</Typography>
+                        </Box>
+                      </Box>
+                    </Grid2>
+                    <Grid2 id='bottom-left-img' size={12} sx={{backgroundColor: 'green', height: '70%', width: '100%', zIndex: 3}}>
+                      <Box id='bottom-right-img-1' sx={{width: '100%', height: '100%', backgroundColor: 'blueviolet'}}>
+                        <img src={racksImg} loading='lazy' style={{objectFit: 'cover', width: '100%', height:'100%'}}  alt="Satokie Racks Image" />
+                      </Box>
+                    </Grid2>
+                  </Grid2>
+                </Box>
+              </Grid2>
+              <Grid2 id='gallery-right-column' size={6} sx={{height: '100%'}}>
+              <Box id='collumn-box-container' width={'100%'} height={'100%'}>
+                <Grid2 id='gallery-left-column-container' container rowSpacing={7.5} width={'100%'} height={'100%'}>
+                  <Grid2 id='top-right-img' size={12} sx={{ height: '30%', width:'100%', zIndex: 3}}>
+                    <Box id='bottom-left-img-container' sx={{ height: '100%', width: '100%', zIndex: 4}}>
+                      <img src={teamImg} loading='lazy' style={{objectFit: 'cover', width: '100%', height:'100%'}}  alt="Satokie Team Image" />
+                    </Box>
+                  </Grid2>
+                  <Grid2 id='bottom-right-img' size={12} sx={{ height: '70%', width: '100%', zIndex: 3}}>
+                    <Box sx={{height: '100%', width: '100%'}}>
+                      <Grid2 container spacing={6} id='bottom-right-img-flex-container' sx={{width: '100%', height: '100%',}}>
+                          <Grid2 size={12} sx={{width: '100%', height: '47%' }}>
+                            <Box id='bottom-right-img-1' sx={{width: '100%', height: '100%'}}>
+                              <img src={teamInspectionImg} loading='lazy' style={{objectFit: 'cover', width: '100%', height:'100%'}}  alt="Satokie Techs Image" />
+                            </Box>
+                          </Grid2>
+                          <Grid2 size={12} sx={{width: '100%', height: '47%'}}>
+                            <Box id='bottom-right-img-2' sx={{width: '100%', height: '100%', backgroundColor: 'red'}}>
+                              <img src={siteRowsImg} loading='lazy' style={{objectFit: 'cover', width: '100%', height:'100%'}}  alt="Satokie Site Rows Image" />
+                            </Box>
+                          </Grid2>                        
+                      </Grid2>
+                    </Box>
+                  </Grid2>
+                </Grid2>
+              </Box>
+            </Grid2>
+          </Grid2>
+        </Box>
+      </Paper>
       <Paper id='footer-contact' elevation={0} sx={{backgroundColor: '#062e60', width: '100vw', height: '100vh', borderRadius: '0'}}>
-        
+        <p>contact@satokie.io</p>
       </Paper>
     </Paper>
   );
