@@ -1,5 +1,4 @@
 import React from 'react';
-import { useEffect } from 'react';
 import Paper from '@mui/material/Paper';
 import videoUrl from '../assets/tour.mp4';
 import VideoItem from '../components/VideoItem';
@@ -17,6 +16,7 @@ import racksImg from '../assets/racks-comp.jpg';
 import siteRowsImg from '../assets/site-rows.jpg';
 import teamInspectionImg from '../assets/teamwork-inspection.webp';
 import {styled } from '@mui/material/styles';
+import '../styles/global.css'
 
 const TicketItem = styled(Box)(({theme}) => ({
   backgroundColor: '#fff',
@@ -159,24 +159,52 @@ export default function Home(props): React.JSX.Element {
         </Box>
       </Paper>
       <Paper id='home-5' elevation={0} sx={{backgroundColor: 'cream', width: '100vw', height: '150vh', maxHeight: 'calc(100vw * 1.6)', borderRadius: '0', zIndex: 0}}>
-        <Box id='gallery-container' width={'100%'} height={'100%'} sx={{padding: '3cqw', zIndex: 1}}>
-          <Grid2 container id='gallery-parent-grid' spacing={4} width={'100%'} height={'100%'} sx={{zIndex: 2, backgroundColor: 'purple'}}>
-              <Grid2 id='gallery-left-column'size={6} sx={{backgroundColor: 'green'}}>
+        <Box id='gallery-container' width={'100%'} height={'100%'} sx={{padding: '6cqw', zIndex: 1}}>
+          <Grid2 container id='gallery-parent-grid' spacing={6} width={'100%'} height={'100%'} sx={{zIndex: 2}}>
+              <Grid2 id='gallery-left-column'size={6}>
                 <Box id='collumn-box-container' width={'100%'} height={'100%'}>
-                  <Grid2 id='gallery-left-column-container' container rowSpacing={8} width={'100%'} height={'100%'}>
-                    <Grid2 id='top-left-text' size={12} sx={{backgroundColor: 'black', height: '30%', width:'100%', zIndex: 3}}>
+                  <Grid2 id='gallery-left-column-container' container rowSpacing={7.5} width={'100%'} height={'100%'}>
+                    <Grid2 id='top-left-text' size={12} sx={{height: '30%', width:'100%', zIndex: 3}}>
+                      <Box id='top-left-text-box'>
+                        <Box id='top-left-text-title' sx={{marginBottom: '2cqh'}}>
+                            <Typography variant='h3' sx={{fontWeight: 'bold', fontSize: '3cqw', color: '#062e60'}}>Setting the Standard for Bitcoin Mining Co-Location</Typography>
+                        </Box>
+                        <Box id='top-left-text-content' sx={{width: '90%'}}>
+                            <Typography variant='h5' sx={{lineHeight: '4cqh', fontSize: '1.6cqw'}}>Our mission is to offer our clients the most ​trustworthy and optimized hosting ​facilities so that they no longer have to ​worry about the quality of care their ASICs ​are getting and know they are receiving ​the lowest power rates.</Typography>
+                        </Box>
+                      </Box>
                     </Grid2>
-                    <Grid2 id='bottom-left-img' size={12} sx={{backgroundColor: 'white', height: '65%', width: '100%', zIndex: 3}}>
+                    <Grid2 id='bottom-left-img' size={12} sx={{backgroundColor: 'green', height: '70%', width: '100%', zIndex: 3}}>
+                      <Box id='bottom-right-img-1' sx={{width: '100%', height: '100%', backgroundColor: 'blueviolet'}}>
+                        <img src={racksImg} loading='lazy' style={{objectFit: 'cover', width: '100%', height:'100%'}}  alt="Satokie Racks Image" />
+                      </Box>
                     </Grid2>
                   </Grid2>
                 </Box>
               </Grid2>
-              <Grid2 id='gallery-right-column' size={6} sx={{backgroundColor: 'orange', height: '100%'}}>
+              <Grid2 id='gallery-right-column' size={6} sx={{height: '100%'}}>
               <Box id='collumn-box-container' width={'100%'} height={'100%'}>
-                <Grid2 id='gallery-left-column-container' container rowSpacing={8} width={'100%'} height={'100%'}>
-                  <Grid2 id='top-left-text' size={12} sx={{backgroundColor: 'yellow', height: '30%', width:'100%', zIndex: 3}}>
+                <Grid2 id='gallery-left-column-container' container rowSpacing={7.5} width={'100%'} height={'100%'}>
+                  <Grid2 id='top-right-img' size={12} sx={{ height: '30%', width:'100%', zIndex: 3}}>
+                    <Box id='bottom-left-img-container' sx={{ height: '100%', width: '100%', zIndex: 4}}>
+                      <img src={teamImg} loading='lazy' style={{objectFit: 'cover', width: '100%', height:'100%'}}  alt="Satokie Team Image" />
+                    </Box>
                   </Grid2>
-                  <Grid2 id='bottom-left-img' size={12} sx={{backgroundColor: 'teal', height: '65%', width: '100%', zIndex: 3}}>
+                  <Grid2 id='bottom-right-img' size={12} sx={{ height: '70%', width: '100%', zIndex: 3}}>
+                    <Box sx={{height: '100%', width: '100%'}}>
+                      <Grid2 container spacing={6} id='bottom-right-img-flex-container' sx={{width: '100%', height: '100%',}}>
+                          <Grid2 size={12} sx={{width: '100%', height: '47%' }}>
+                            <Box id='bottom-right-img-1' sx={{width: '100%', height: '100%'}}>
+                              <img src={teamInspectionImg} loading='lazy' style={{objectFit: 'cover', width: '100%', height:'100%'}}  alt="Satokie Techs Image" />
+                            </Box>
+                          </Grid2>
+                          <Grid2 size={12} sx={{width: '100%', height: '47%'}}>
+                            <Box id='bottom-right-img-2' sx={{width: '100%', height: '100%', backgroundColor: 'red'}}>
+                              <img src={siteRowsImg} loading='lazy' style={{objectFit: 'cover', width: '100%', height:'100%'}}  alt="Satokie Site Rows Image" />
+                            </Box>
+                          </Grid2>                        
+                      </Grid2>
+                    </Box>
                   </Grid2>
                 </Grid2>
               </Box>
