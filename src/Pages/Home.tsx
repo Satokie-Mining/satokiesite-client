@@ -86,7 +86,7 @@ export default function Home(props): React.JSX.Element {
                 </Box>
                 <Box id='ticket-content-1' position='absolute' flexWrap='nowrap' zIndex={2} sx={{width: '80%', height: '100%', display:'flex',flexDirection:'column', justifyContent:'center', alignItems:'center'}} >
                   <Box display='flex' justifyContent='center' alignItems='center'>
-                    <img style={{objectFit: 'contain', width:'30%', height:'auto', marginBottom: '3cqh', }} src={cloudHostingSvg} alt="Cloud Hosting Image" />
+                    <img style={{objectFit: 'contain', width:'45%', height:'auto', marginBottom: '3cqh', }} src={cloudHostingSvg} alt="Cloud Hosting Image" />
                   </Box>
                   <Box sx={{width: '80%', height: 'auto'}}>
                     <Typography textAlign='center' color='white' sx={{fontSize: '1.9cqw', fontWeight: 'bold', marginBottom:'calc(.5vw + .5vh)', textWrap: 'nowrap'}}>Hosting Solutions</Typography>
@@ -125,10 +125,13 @@ export default function Home(props): React.JSX.Element {
                     <img style={{objectFit: 'contain', width:'30%', height:'auto', marginBottom: '3cqh'}} src={handsSvg} alt="Cloud Hosting Image" />
                   </Box>
                   <Box sx={{width: '80%', height: 'auto'}}>
-                    <Typography textAlign='center' color='white' sx={{fontSize: '1.9cqw', fontWeight: 'bold', marginBottom:'calc(.5vw + .5vh)', textWrap: 'nowrap'}}>Hosting Solutions</Typography>
+                    <Typography 
+                      textAlign='center' 
+                      color='white'
+                      sx={{fontSize: '1.9cqw', fontWeight: 'bold', marginBottom:'calc(.5vw + .5vh)', textWrap: 'nowrap'}}>Consulting</Typography>
                   </Box>
                   <Box sx={{width: '80%', height: 'auto'}}>
-                    <Typography sx={{fontSize: '1cqw'}} textAlign='center' color='white'>Have ASICs that need cheap ​energy? Contact us today to get ​access to the cheapest power in ​the industry ran by world class ​operators.</Typography>
+                    <Typography sx={{fontSize: '1cqw'}} textAlign='center' color='white'>Need help finding a site or structuring a power purchase agreement? We offer our team expertise to anyone looking to develop their own optimized mining facility.</Typography>
                   </Box>
                 </Box>
               </Box>
@@ -233,7 +236,7 @@ export default function Home(props): React.JSX.Element {
           </Box>
           <Box id='subfooter-overlay' sx={{height: '100%', width: '90%', marginLeft: '3cqw', position: 'absolute', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
             <Box sx={{textAlign: 'center'}}>
-              <Typography variant='h6' sx={{ fontSize: '2cqw', color: 'white', textShadow: '0em .4em .5em rgba(0,0,0, .8) !important', textDecoration: 'underline'}}>contact@satokie.io</Typography>
+              <Typography variant='h6' sx={{ fontSize: '1.5cqw', color: 'white', textShadow: '0em .4em .5em rgba(0,0,0, .8) !important', textDecoration: 'underline'}}>contact@satokiemining.io</Typography>
             </Box>
             <Box>
               <Link href="https://x.com/SatokieMining">
