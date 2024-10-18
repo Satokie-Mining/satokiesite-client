@@ -39,8 +39,9 @@ export default function Home({isActive, isMobile}): React.JSX.Element {
   return (
     <React.Fragment>
     {isMobile ? 
+    //Mobile
       <Paper  sx={{position: 'relative', flexGrow: 1, overflowX: 'hidden', borderRadius: '0'}}>
-        <Paper id='home-1' elevation={3} sx={{width: '100vw', height: isMobile ? '27vh': '90vh', borderRadius: '0'}}>
+        <Paper id='home-1' elevation={3} sx={{width: '100vw', height: '27vh', borderRadius: '0'}}>
           <Nav isActive={isActive} isMobile={isMobile}/>
           <Grid2 container spacing={0} sx={{display: 'flex', justifyContent: 'center', alignItems:'center', width: '100%', height: '100%'}}>
               <Box sx={{
@@ -53,23 +54,23 @@ export default function Home({isActive, isMobile}): React.JSX.Element {
               </Box>
           </Grid2>
         </Paper>
-        <Paper id='home-2' elevation={0} sx={{width: '100vw', height: isMobile ? '27vh':'90vh', borderRadius: '0', position: 'relative', overflow: 'hidden'}}>
+        <Paper id='home-2' elevation={0} sx={{width: '100vw', height: '27vh', borderRadius: '0', position: 'relative', overflow: 'hidden'}}>
           <Paper elevation={0} sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100%', borderRadius:'0', position: 'absolute'}}>
             <img style={{zIndex: 2, position: 'absolute', width: 'auto', height: '100%'}} src={curvySection} alt="svg curvy background image" />
-            <Grid2 container sx={{ margin: isMobile? '0' :'calc(4vw+5vh)', width: '100vw', height: "90%", zIndex: 3}}>
+            <Grid2 container sx={{ margin: '0', height: "90%", zIndex: 3}}>
               <Grid2 size={5} sx={{display: 'flex', flexDirection: 'column',alignItems: 'center', justifyContent:'center'}} >
-                <Box sx={{width: 'calc(20vw + 20vh)', marginBottom: 'calc(10vw + 10vh)', marginLeft:'calc(10vw + 10vw)'}}>
-                  <Typography variant='h6'  sx={{fontSize: 'calc(.6vh + .6vw)'}}color='white'>Satokie Mining</Typography>
-                  <Typography variant='h3' sx={{fontSize: 'calc(1.6vh + 1.6vw)', textWrap: 'wrap'}} color='white'>WE BUILD, OWN AND OPERATE DATACENTERS THAT SUPPORT THE BITCOIN NETWORK</Typography>
+                <Box sx={{width: '55cqw', marginBottom: 'calc(10vw + 10vh)', marginLeft:'calc(10vw + 10vw)'}}>
+                  <Typography variant='h6'  sx={{fontSize: '1.2cqw'}}color='white'>Satokie Mining</Typography>
+                  <Typography variant='h3' sx={{fontSize: '3.5cqw', textWrap: 'wrap'}} color='white'>WE BUILD, OWN AND OPERATE DATACENTERS THAT SUPPORT THE BITCOIN NETWORK</Typography>
                 </Box>
               </Grid2>
               <Grid2 size={7} sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
-                  <Box sx={{marginTop: 'calc(10vw + 10vh)', backgroundColor: 'black', width: 'calc(10vw + 10vh)', height: 'calc(10vw + 10vh)', borderRadius: '50%', objectFit: 'contain', overflow: 'hidden', display: 'flex'}}>
-                    <img style={{objectFit: 'cover'}}src={rackImg} alt="satokie rack image" />
-                  </Box> 
-                  <Box sx={{backgroundColor: 'black', width: 'calc(18vw + 18vh)', height: 'calc(18vw + 18vh)', borderRadius: '50%', objectFit: 'contain', overflow: 'hidden', display: 'flex'}}>
-                    <img style={{objectFit: 'cover'}} src={siteImg} alt="satokie site image" />
-                  </Box>
+                <Box sx={{marginTop: '20cqw', backgroundColor: 'black', width: '20cqw', height: '20cqw', borderRadius: '50%', objectFit: 'contain', overflow: 'hidden', display: 'flex'}}>
+                  <img style={{objectFit: 'cover'}}src={rackImg} alt="satokie rack image" />
+                </Box> 
+                <Box sx={{backgroundColor: 'black', width: '35cqw', height: '35cqw', borderRadius: '50%', objectFit: 'contain', overflow: 'hidden', display: 'flex'}}>
+                  <img style={{objectFit: 'cover'}} src={siteImg} alt="satokie site image" />
+                </Box>
               </Grid2>
             </Grid2>
           </Paper>
@@ -250,6 +251,7 @@ export default function Home({isActive, isMobile}): React.JSX.Element {
         </Paper>
       </Paper>
     :
+    //Desktop
       <Paper  sx={{position: 'relative', flexGrow: 1, overflowX: 'hidden'}}>
         <Paper id='home-1' elevation={3} sx={{backgroundColor: 'black', width: '100vw', height: '90vh', borderRadius: '0'}}>
           <Nav isActive={isActive} isMobile={isMobile}/>
