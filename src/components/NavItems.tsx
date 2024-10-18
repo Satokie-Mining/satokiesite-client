@@ -48,7 +48,7 @@ export default function NavItems({isActive, isMobile}): React.JSX.Element {
 
 
   return (
-    <Grid2 size={6} sx={{ display: 'flex', justifyContent:' flex-end', position: 'absolute', zIndex: 3, margin: isMobile ? '0': '2.0rem', marginTop: isMobile ? '8cqw': '0', marginRight: isMobile ? '4cqw': '0'}}>
+    <Grid2 size={6} sx={{ display: 'flex', justifyContent:' flex-end', position: 'absolute', zIndex: 3, margin: isMobile ? '0': '2cqw', marginTop: isMobile ? '8cqw': '2cqw', marginRight: isMobile ? '4cqw': '2cqw'}}>
       {navItems.map( item => (
           <Link href={item.ref} underline='hover' sx={navLinkStyle} style={{textDecoration: isActive ? 'underline': 'none', marginTop: isMobile? '1cqw': '0'}}>
             <Typography sx={isMobile ?  mobileNavTypograhyStyle : navTypographyStyle}>{item.text}</Typography>
