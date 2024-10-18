@@ -40,7 +40,7 @@ export default function Home({isActive, isMobile}): React.JSX.Element {
     <React.Fragment>
     {isMobile ? 
     //Mobile
-      <Paper  sx={{position: 'relative', flexGrow: 1, overflowX: 'hidden', borderRadius: '0'}}>
+      <Paper  sx={{position: 'relative', flexGrow: 1, overflowX: 'hidden', overflowY: 'scroll', borderRadius: '0'}}>
         <Paper id='home-1' elevation={3} sx={{width: '100vw', height: '27vh', borderRadius: '0'}}>
           <Nav isActive={isActive} isMobile={isMobile}/>
           <Grid2 container spacing={0} sx={{display: 'flex', justifyContent: 'center', alignItems:'center', width: '100%', height: '100%'}}>
@@ -218,7 +218,7 @@ export default function Home({isActive, isMobile}): React.JSX.Element {
             </Grid2>
           </Box>
         </Paper>
-        <Paper id='footer-contact' elevation={0} sx={{backgroundColor: '#062e60', width: '100vw', height: '90vh', borderRadius: '0', marginTop: '2cqw', overflow: 'hidden'}}>
+        <Paper id='footer-contact' elevation={0} sx={{backgroundColor: '#062e60', width: '100vw', height: '20vh', borderRadius: '0', marginTop: '2cqw', overflow: 'hidden'}}>
           <Box id='footer-img-container' sx={{width: '100%', height: '80%', position: 'relative'}}>
             <Box id='background-img' sx={{width: '100%', height: '100%', position: 'absolute'}}>
               <img src={poloImg} style={{objectFit: 'cover', height: '100%', width: '100%'}} alt="Satokie Logo on Polo Shirt" />
