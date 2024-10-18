@@ -166,17 +166,17 @@ export default function Home({isActive, isMobile}): React.JSX.Element {
         </Paper>
         <Paper id='home-5' elevation={0} sx={{backgroundColor: 'cream', width: '100vw', height: '150vh', maxHeight: 'calc(100vw * 1.6)', borderRadius: '0', zIndex: 0}}>
           <Box id='gallery-container' width={'100%'} height={'100%'} sx={{padding: '6cqw', zIndex: 1}}>
-            <Grid2 container id='gallery-parent-grid' spacing={6} width={'100%'} height={'100%'} sx={{zIndex: 2}}>
+            <Grid2 container id='gallery-parent-grid' spacing={3} width={'100%'} height={'100%'} sx={{zIndex: 2}}>
                 <Grid2 id='gallery-left-column'size={6}>
                   <Box id='collumn-box-container' width={'100%'} height={'100%'}>
-                    <Grid2 id='gallery-left-column-container' container rowSpacing={7.5} width={'100%'} height={'100%'}>
+                    <Grid2 id='gallery-left-column-container' container rowSpacing={3} width={'100%'} height={'100%'}>
                       <Grid2 id='top-left-text' size={12} sx={{height: '30%', width:'100%', zIndex: 3}}>
                         <Box id='top-left-text-box'>
-                          <Box id='top-left-text-title' sx={{marginBottom: '2cqh'}}>
-                              <Typography variant='h3' sx={{fontWeight: 'bold', fontSize: '3cqw', color: '#062e60'}}>Setting the Standard for Bitcoin Mining Co-Location</Typography>
+                          <Box id='top-left-text-title'>
+                              <Typography variant='h3' sx={{fontWeight: 'bold', fontSize: '4cqw', color: '#062e60'}}>Setting the Standard for Bitcoin Mining Colocation</Typography>
                           </Box>
                           <Box id='top-left-text-content' sx={{width: '90%'}}>
-                              <Typography variant='h5' sx={{lineHeight: '4cqh', fontSize: '1.6cqw'}}>Our mission is to offer our clients the most ​trustworthy and optimized hosting ​facilities so that they no longer have to ​worry about the quality of care their ASICs ​are getting and know they are receiving ​the lowest power rates.</Typography>
+                              <Typography variant='h5' sx={{lineHeight: '3.5cqw', fontSize: '2.5cqw'}}>Our mission is to deliver cutting-edge solutions that optimize energy assets by leveraging Bitcoin Mining as a tool. Satokie Mining aims to embed itself at the intersection of Bitcoin mining and traditional energy markets and assets.</Typography>
                           </Box>
                         </Box>
                       </Grid2>
@@ -190,7 +190,7 @@ export default function Home({isActive, isMobile}): React.JSX.Element {
                 </Grid2>
                 <Grid2 id='gallery-right-column' size={6} sx={{height: '100%'}}>
                 <Box id='collumn-box-container' width={'100%'} height={'100%'}>
-                  <Grid2 id='gallery-left-column-container' container rowSpacing={7.5} width={'100%'} height={'100%'}>
+                  <Grid2 id='gallery-left-column-container' container rowSpacing={3} width={'100%'} height={'100%'}>
                     <Grid2 id='top-right-img' size={12} sx={{ height: '30%', width:'100%', zIndex: 3}}>
                       <Box id='bottom-left-img-container' sx={{ height: '100%', width: '100%', zIndex: 4}}>
                         <img src={teamImg} loading='lazy' style={{objectFit: 'cover', width: '100%', height:'100%'}}  alt="Satokie Team Image" />
@@ -198,7 +198,7 @@ export default function Home({isActive, isMobile}): React.JSX.Element {
                     </Grid2>
                     <Grid2 id='bottom-right-img' size={12} sx={{ height: '70%', width: '100%', zIndex: 3}}>
                       <Box sx={{height: '100%', width: '100%'}}>
-                        <Grid2 container spacing={6} id='bottom-right-img-flex-container' sx={{width: '100%', height: '100%',}}>
+                        <Grid2 container spacing={3} id='bottom-right-img-flex-container' sx={{width: '100%', height: '100%',}}>
                             <Grid2 size={12} sx={{width: '100%', height: '47%' }}>
                               <Box id='bottom-right-img-1' sx={{width: '100%', height: '100%'}}>
                                 <img src={teamInspectionImg} loading='lazy' style={{objectFit: 'cover', width: '100%', height:'100%'}}  alt="Satokie Techs Image" />
@@ -388,10 +388,10 @@ export default function Home({isActive, isMobile}): React.JSX.Element {
                       <Grid2 id='top-left-text' size={12} sx={{height: '30%', width:'100%', zIndex: 3}}>
                         <Box id='top-left-text-box'>
                           <Box id='top-left-text-title' sx={{marginBottom: '2cqh'}}>
-                              <Typography variant='h3' sx={{fontWeight: 'bold', fontSize: '3cqw', color: '#062e60'}}>Setting the Standard for Bitcoin Mining Co-Location</Typography>
+                              <Typography variant='h3' sx={{fontWeight: 'bold', fontSize: '3cqw', color: '#062e60'}}>Setting the Standard for Bitcoin Mining Colocation</Typography>
                           </Box>
                           <Box id='top-left-text-content' sx={{width: '90%'}}>
-                              <Typography variant='h5' sx={{lineHeight: '4cqh', fontSize: '1.6cqw'}}>Our mission is to offer our clients the most ​trustworthy and optimized hosting ​facilities so that they no longer have to ​worry about the quality of care their ASICs ​are getting and know they are receiving ​the lowest power rates.</Typography>
+                              <Typography variant='h5' sx={{lineHeight: '4cqh', fontSize: '1.6cqw'}}>Our mission is to deliver cutting-edge solutions that optimize energy assets by leveraging Bitcoin Mining as a tool. Satokie Mining aims to embed itself at the intersection of Bitcoin mining and traditional energy markets and assets.</Typography>
                           </Box>
                         </Box>
                       </Grid2>
