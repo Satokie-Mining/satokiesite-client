@@ -3,7 +3,7 @@ import {Paper, Grid2, Typography, Link, Box} from '@mui/material';
 
 
 
-export default function UnderConstruction(): React.JSX.Element {
+export default function UnderConstruction({isMobile}): React.JSX.Element {
 
 
   return (
