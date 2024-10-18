@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid2, Link } from "@mui/material";
 import logo from '../assets/logo-1.png';
 
-export default function Logo(): React.JSX.Element{
+export default function Logo({isMobile}): React.JSX.Element{
   
   return (
     <Grid2 sx={{ zIndex: 3}}>
