@@ -9,6 +9,7 @@ export default function VideoItem (props) {
       loop 
       muted
       playsInline
+      preload='auto'
     >
       <source src={props.videoUrl} type='video/mp4' />
     </video>
