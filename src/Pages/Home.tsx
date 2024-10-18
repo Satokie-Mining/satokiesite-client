@@ -236,7 +236,9 @@ export default function Home({isActive, isMobile}): React.JSX.Element {
             </Box>
             <Box id='subfooter-overlay' sx={{height: '100%', width: '90%', marginLeft: '3cqw', position: 'absolute', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
               <Box sx={{textAlign: 'center'}}>
-                <Typography variant='h6' sx={{ fontSize: '1.5cqw', color: 'white', textShadow: '0em .4em .5em rgba(0,0,0, .8) !important', textDecoration: 'underline'}}>contact@satokiemining.io</Typography>
+                <Link href='mailto:contact@satokiemining.io'>
+                  <Typography variant='h6' sx={{ fontSize: '1.5cqw', color: 'white', textShadow: '0em .4em .5em rgba(0,0,0, .8) !important', textDecoration: 'underline'}}>contact@satokiemining.io</Typography>
+                </Link>
               </Box>
               <Box>
                 <Link href="https://x.com/SatokieMining">
@@ -451,7 +453,9 @@ export default function Home({isActive, isMobile}): React.JSX.Element {
             </Box>
             <Box id='subfooter-overlay' sx={{height: '100%', width: '90%', marginLeft: '3cqw', position: 'absolute', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
               <Box sx={{textAlign: 'center'}}>
-                <Typography variant='h6' sx={{ fontSize: '1.5cqw', color: 'white', textShadow: '0em .4em .5em rgba(0,0,0, .8) !important', textDecoration: 'underline'}}>contact@satokiemining.io</Typography>
+                <Link href="mailto:contact@satokiemining.io">
+                  <Typography variant='h6' sx={{ fontSize: '1.5cqw', color: 'white', textShadow: '0em .4em .5em rgba(0,0,0, .8) !important', textDecoration: 'underline'}}>contact@satokiemining.io</Typography>
+                </Link>
               </Box>
               <Box>
                 <Link href="https://x.com/SatokieMining">
